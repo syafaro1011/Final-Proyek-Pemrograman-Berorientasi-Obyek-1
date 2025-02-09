@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="752.0" prefWidth="1105.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.food_order_app.controller.ManageFoodController">
+   <children>
+      <HBox layoutX="-5.0" layoutY="-1.0" prefHeight="109.0" prefWidth="1113.0">
+         <children>
+            <Pane prefHeight="109.0" prefWidth="364.0" />
+            <Label alignment="CENTER" prefHeight="109.0" prefWidth="236.0" text="Setting Item" textAlignment="CENTER" textOverrun="CLIP">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+            <Pane prefHeight="138.0" prefWidth="393.0" />
+         </children>
+      </HBox>
+      <VBox layoutX="8.0" prefHeight="752.0" prefWidth="325.0" styleClass="right-bar" stylesheets="@style.css">
+         <children>
+            <Pane prefHeight="250.0" prefWidth="325.0">
+               <children>
+                  <TextField fx:id="fieldNama" alignment="CENTER" layoutX="19.0" layoutY="195.0" prefHeight="41.0" prefWidth="287.0" promptText="Nama" stylesheets="@style.css">
+                     <styleClass>
+                        <String fx:value="search-box" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+               </children></Pane>
+            <Pane prefHeight="21.0" prefWidth="336.0">
+               <children>
+                  <TextField fx:id="fieldHarga" alignment="CENTER" layoutX="19.0" layoutY="1.0" prefHeight="41.0" prefWidth="287.0" promptText="Harga" stylesheets="@style.css">
+                     <styleClass>
+                        <String fx:value="search-box" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </Pane>
+            <Pane prefHeight="96.0" prefWidth="325.0">
+               <children>
+                  <TextField fx:id="fieldPath" alignment="CENTER" layoutX="19.0" layoutY="36.0" prefHeight="41.0" prefWidth="287.0" promptText="Path Gambar" stylesheets="@style.css">
+                     <styleClass>
+                        <String fx:value="search-box" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </Pane>
+            <HBox prefHeight="29.0" prefWidth="325.0">
+               <children>
+                  <Pane prefHeight="100.0" prefWidth="133.0">
+                     <children>
+                        <Label layoutX="32.0" layoutY="-3.0" prefHeight="33.0" prefWidth="107.0" text="Ketersediaan">
+                           <font>
+                              <Font name="Cambria" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <CheckBox fx:id="checkItem" alignment="CENTER" mnemonicParsing="false" prefHeight="27.0" prefWidth="42.0" stylesheets="@style.css" />
+               </children>
+            </HBox>
+            <Pane prefHeight="37.0" prefWidth="325.0" />
+            <HBox prefHeight="47.0" prefWidth="325.0">
+               <children>
+                  <Pane prefHeight="47.0" prefWidth="38.0" />
+                  <Button fx:id="btnTambah" mnemonicParsing="false" onAction="#addItem" prefHeight="35.0" prefWidth="101.0" text="TAMBAH" textFill="WHITE">
+                     <stylesheets>
+                        <URL value="@../values/style.css" />
+                        <URL value="@style.css" />
+                     </stylesheets>
+                     <styleClass>
+                        <String fx:value="search-button" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                  </Button>
+                  <Pane prefHeight="95.0" prefWidth="4.0" />
+                  <Pane prefHeight="95.0" prefWidth="16.0" />
+                  <Button fx:id="btnUpdate" mnemonicParsing="false" onAction="#updateItem" prefHeight="35.0" prefWidth="106.0" text="UPDATE" textFill="WHITE">
+                     <stylesheets>
+                        <URL value="@../values/style.css" />
+                        <URL value="@style.css" />
+                     </stylesheets>
+                     <styleClass>
+                        <String fx:value="search-button" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                  </Button>
+                  <Pane prefHeight="95.0" prefWidth="16.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="41.0" prefWidth="325.0">
+               <children>
+                  <Pane prefHeight="41.0" prefWidth="19.0" />
+                  <Pane prefHeight="95.0" prefWidth="4.0" />
+                  <Pane prefHeight="95.0" prefWidth="16.0" />
+                  <Button fx:id="btnHapus" mnemonicParsing="false" onAction="#deleteItem" prefHeight="35.0" prefWidth="98.0" text="HAPUS" textFill="WHITE">
+                     <stylesheets>
+                        <URL value="@../values/style.css" />
+                        <URL value="@style.css" />
+                     </stylesheets>
+                     <styleClass>
+                        <String fx:value="search-button" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                  </Button>
+                  <Pane prefHeight="41.0" prefWidth="24.0" />
+                  <Button fx:id="btnRefresh" mnemonicParsing="false" onAction="#refreshTable" prefHeight="35.0" prefWidth="106.0" text="REFRESH" textFill="WHITE">
+                     <stylesheets>
+                        <URL value="@../values/style.css" />
+                        <URL value="@style.css" />
+                     </stylesheets>
+                     <styleClass>
+                        <String fx:value="search-button" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <TableView fx:id="tableItem" editable="true" layoutX="389.0" layoutY="120.0" prefHeight="447.0" prefWidth="702.0" styleClass="transparent" stylesheets="@style.css">
+        <columns>
+          <TableColumn fx:id="colID" prefWidth="91.0" text="ID" />
+          <TableColumn fx:id="colNAMA" prefWidth="191.0" text="NAMA" />
+            <TableColumn fx:id="colHARGA" prefWidth="179.0" text="HARGA" />
+            <TableColumn fx:id="colKETERSEDIAAN" minWidth="7.0" prefWidth="136.0" text="KETERSEDIAAN" />
+            <TableColumn fx:id="colPATH" minWidth="7.0" prefWidth="101.0" text="PATH" />
+        </columns>
+      </TableView>
+      <HBox layoutX="343.0" layoutY="638.0" prefHeight="100.0" prefWidth="753.0">
+         <children>
+            <Pane prefHeight="100.0" prefWidth="299.0" />
+            <Button fx:id="btnSelesai" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleCustomer" prefHeight="35.0" prefWidth="156.0" text="SELESAI" textFill="WHITE">
+               <stylesheets>
+                  <URL value="@../values/style.css" />
+                  <URL value="@style.css" />
+               </stylesheets>
+               <styleClass>
+                  <String fx:value="search-button" />
+                  <String fx:value="shadow" />
+               </styleClass>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
