@@ -8,10 +8,10 @@
 ## Kelompok
 <ul>
   <li>Kelompok: { 6 }</li>
-  <li>Proyek: {Food Order Appkication}</li>
+  <li>Proyek: {Food Order Application}</li>
   <li>Anggota:</li>
   <ul>
-    <li>Ketua: <a href="">Syaiful Fathur Rozaq</a></li>
+    <li>Ketua: <a href="https://github.com/syafaro1011/">Syaiful Fathur Rozaq</a></li>
     <li>Anggota 1: <a href="">Muhammad Rifki Fahrosy</a></li>
     <li>Anggota 2: <a href="">Farhandhika Nurrohman</a></li>
   </ul>
